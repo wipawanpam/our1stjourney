@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+<title>Our Firsts 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Kalam:wght@400;700&family=Prompt:wght@300;400;500;600;700&family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- floating particles canvas -->
+<canvas id="particles"></canvas>
+
+<!-- ============ COVER ============ -->
+<section id="cover" class="screen active">
+  <div class="cover-sky">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="sparkle-field"></div>
+  </div>
+
+  <div class="cover-content">
+    <p class="eyebrow">a little scrapbook of us</p>
+    <h1 class="cover-title">Our 1st Journey</h1>
+    <p class="cover-sub" id="coverSubtitle">ทุกๆ "ครั้งแรก" ของเรา รวมไว้ในที่เดียว</p>
+
+    <button id="openBookBtn" class="btn-primary">
+      <span class="envelope">
+        <span class="env-back"></span>
+        <span class="env-flap"></span>
+        <span class="env-heart">❤</span>
+      </span>
+      <span id="openBtnLabel">เปิดเรื่องราวของเรา</span>
+    </button>
+  </div>
+
+  <div class="moon" id="moonBtn" title="🌙">
+    <div class="moon-crater c1"></div>
+    <div class="moon-crater c2"></div>
+    <div class="moon-crater c3"></div>
+  </div>
+</section>
+
+<!-- ============ MAP ============ -->
+<section id="mapScreen" class="screen">
+  <header class="map-header">
+    <h2 class="map-title">Our 1st Journey</h2>
+    <p class="map-hint">Tap each pin to explore our little firsts ✨<br><span class="map-hint-sub">Our firsts, with no last. ♡</span></p>
+  </header>
+
+  <div class="map-stage" id="mapStage">
+    <div class="hill hill-1"></div>
+    <div class="hill hill-2"></div>
+    <div class="hill hill-3"></div>
+    <div class="deco tree t1">🌳</div>
+    <div class="deco tree t2">🌲</div>
+    <div class="deco flower f1">🌸</div>
+    <div class="deco flower f2">🌷</div>
+    <div class="deco cloud-deco cd1">☁️</div>
+    <div class="deco cloud-deco cd2">☁️</div>
+
+    <div class="pond-croc" title="จระเข้">🐊</div>
+    <div class="pond-shark" title="ฉลาม">🦈</div>
+    <div class="pond-jelly pj1" title="แมงกะพรุน">🪼</div>
+    <div class="pond-jelly pj2" title="แมงกะพรุน">🪼</div>
+
+    <div class="deco forest-kangaroo" title="จิงโจ้">🦘</div>
+    <div class="deco forest-ostrich" title="นกกระจอกเทศ">🦤</div>
+
+    <div class="sacred-fountain" title="บ่อน้ำพุศักดิ์สิทธิ์">
+      <div class="fountain-flower ff1">🌺</div>
+      <div class="fountain-flower ff2">🌸</div>
+      <div class="fountain-flower ff3">🌼</div>
+      <div class="fountain-flower ff4">🌷</div>
+      <div class="fountain-icon">⛲</div>
+      <div class="fountain-sparkle">✨</div>
+    </div>
+
+    <div class="veggie-patch" title="แปลงผัก">
+      <span>🥕</span><span>🥬</span><span>🍅</span><span>🌽</span><span>🥔</span>
+    </div>
+
+    <div class="homestead">
+      <div class="vehicle veh-moto" title="มอเตอร์ไซค์">🏍️</div>
+      <div class="cottage" title="บ้านของเรา">
+        <div class="ct-roof"></div>
+        <div class="ct-body">
+          <div class="ct-window"></div>
+          <div class="ct-door"></div>
+        </div>
+      </div>
+      <div class="cottage-hedge"></div>
+      <div class="cottage-mailbox">📮</div>
+      <div class="vehicle veh-jetski" title="เจ็ตสกี">🚤</div>
+      <div class="vehicle veh-plane" title="เครื่องบิน">🛩️</div>
+      <div class="red-wagon" title="รถเข็นสีแดง">
+        <div class="wagon-handle"></div>
+        <div class="wagon-body"></div>
+        <div class="wagon-wheel ww1"></div>
+        <div class="wagon-wheel ww2"></div>
+      </div>
+    </div>
+
+    <div class="farm-zone">
+      <div class="pen pen-chicken" title="เล้าไก่ (8 ตัว)">
+        <div class="pen-hut">🛖</div>
+        <div class="pen-animals">
+          <span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span><span class="animal">🐓</span>
+        </div>
+      </div>
+      <div class="pen pen-wombat" title="คอกวอมแบต (4 ตัว)">
+        <div class="pen-hut">🪵</div>
+        <div class="pen-animals">
+          <span class="wombat wombat-gray animal">🦡</span><span class="wombat wombat-brown animal">🦡</span><span class="wombat wombat-brown animal">🦡</span><span class="wombat wombat-cow animal">🦡</span>
+        </div>
+      </div>
+      <div class="pen pen-platypus" title="คอกตุ่นปากเป็ด (4 ตัว)">
+        <div class="pen-hut">🪵</div>
+        <div class="pen-animals">
+          <span class="animal">🦫</span><span class="animal">🦫</span><span class="animal">🦫</span><span class="animal">🦫</span>
+        </div>
+      </div>
+      <div class="pen pen-bettong" title="คอกเบททอง (2 ตัว)">
+        <div class="pen-hut">🪵</div>
+        <div class="pen-animals">
+          <span class="animal">🐀</span><span class="animal">🐀</span>
+        </div>
+      </div>
+      <div class="pen pen-dog" title="คอกหมา (3 ตัว)">
+        <div class="kennel dh1"><div class="k-roof"></div><div class="k-body"></div><div class="k-door"></div><div class="k-ramp"></div></div>
+        <div class="kennel dh2"><div class="k-roof"></div><div class="k-body"></div><div class="k-door"></div><div class="k-ramp"></div></div>
+        <div class="kennel dh3"><div class="k-roof"></div><div class="k-body"></div><div class="k-door"></div><div class="k-ramp"></div></div>
+        <div class="pen-animals dog-animals">
+          <span class="farm-dog dog-white animal" title="หมาขาว">🐕</span><span class="farm-dog dog-brown animal" title="หมาน้ำตาล">🐕</span><span class="farm-dog dog-black animal" title="หมาดำ">🐕</span>
+        </div>
+      </div>
+    </div>
+
+    <svg id="pathSvg" class="path-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <filter id="watercolor" x="-30%" y="-30%" width="160%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9 0.06" numOctaves="2" seed="7" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+          <feGaussianBlur stdDeviation="1.1"/>
+        </filter>
+      </defs>
+      <g filter="url(#watercolor)">
+        <path id="trailPathEdge" fill="none" stroke="#d8b184" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" opacity=".38"/>
+        <path id="trailPathDirt" fill="none" stroke="#e6c79c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" opacity=".55"/>
+        <path id="trailPath" fill="none" stroke="#cfa877" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" opacity=".4"/>
+      </g>
+    </svg>
+
+    <div id="pinsLayer" class="pins-layer"></div>
+
+    <div class="chibi chibi-her" id="chibiHer">
+      <div class="chibi-shadow"></div>
+      <div class="chibi-body">
+        <div class="arm arm-l"></div>
+        <div class="arm arm-r"></div>
+        <div class="head">
+          <svg class="chibi-head-svg" viewBox="0 0 60 76" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6,15 C4,45 6,68 12,76 L26,76 C22,55 18,35 20,15 Z" fill="#0080FE"/>
+            <path d="M54,15 C56,45 54,68 48,76 L34,76 C38,55 42,35 40,15 Z" fill="#0080FE"/>
+            <circle cx="30" cy="35" r="20" fill="#ffe3cf"/>
+            <path d="M8,22 C6,6 18,0 30,0 C42,0 54,6 52,22 Z" fill="#0080FE"/>
+            <path d="M17,29 Q21,26 25,28" stroke="#0080FE" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M35,28 Q39,26 43,29" stroke="#0080FE" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <ellipse cx="22.5" cy="37" rx="4.6" ry="5.4" fill="#2b211c"/>
+            <ellipse cx="37.5" cy="37" rx="4.6" ry="5.4" fill="#2b211c"/>
+            <circle cx="20.6" cy="34.6" r="1.7" fill="#fff"/>
+            <circle cx="35.6" cy="34.6" r="1.7" fill="#fff"/>
+            <circle cx="24.3" cy="39" r=".9" fill="#fff" opacity=".85"/>
+            <circle cx="39.3" cy="39" r=".9" fill="#fff" opacity=".85"/>
+            <ellipse cx="16.5" cy="43" rx="3.2" ry="2" fill="#ff9fb0" opacity=".7"/>
+            <ellipse cx="43.5" cy="43" rx="3.2" ry="2" fill="#ff9fb0" opacity=".7"/>
+            <path d="M27,46 Q30,49 33,46" stroke="#c76b7a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="torso torso-her"><span class="torso-label">Pompam</span></div>
+        <div class="leg leg-l"></div>
+        <div class="leg leg-r"></div>
+      </div>
+      <div class="heart-pop">💕</div>
+    </div>
+
+    <div class="chibi chibi-him" id="chibiHim">
+      <div class="chibi-shadow"></div>
+      <div class="chibi-body">
+        <div class="arm arm-l"></div>
+        <div class="arm arm-r"></div>
+        <div class="head">
+          <svg class="chibi-head-svg" viewBox="0 0 60 76" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="35" r="20" fill="#ffe3cf"/>
+            <path d="M8,24 C6,6 18,-2 30,-2 C42,-2 55,6 52,24 Z" fill="#0080FE"/>
+            <path d="M28,-3 C38,-9 52,-4 54,9 C55,17 51,23 45,22 C50,16 49,7 41,1 C36,-2 31,-1 28,2 Z" fill="#0080FE"/>
+            <path d="M8,22 C6,28 7,34 10,38 C10,30 10,26 12,20 Z" fill="#0080FE"/>
+            <path d="M52,24 C55,30 54,36 50,40 C50,32 51,27 49,22 Z" fill="#0080FE"/>
+            <path d="M17,29 Q21,26 25,28" stroke="#0080FE" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M35,28 Q39,26 43,29" stroke="#0080FE" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <ellipse cx="22.5" cy="38" rx="4.6" ry="5.2" fill="#3b2a20"/>
+            <ellipse cx="37.5" cy="38" rx="4.6" ry="5.2" fill="#3b2a20"/>
+            <circle cx="20.6" cy="35.6" r="1.7" fill="#fff"/>
+            <circle cx="35.6" cy="35.6" r="1.7" fill="#fff"/>
+            <circle cx="24.3" cy="40" r=".9" fill="#fff" opacity=".85"/>
+            <circle cx="39.3" cy="40" r=".9" fill="#fff" opacity=".85"/>
+            <rect x="15" y="33" width="15" height="12" rx="4" fill="none" stroke="#8a8a8a" stroke-width="1.6"/>
+            <rect x="30" y="33" width="15" height="12" rx="4" fill="none" stroke="#8a8a8a" stroke-width="1.6"/>
+            <path d="M28,38 Q30,36 32,38" stroke="#8a8a8a" stroke-width="1.4" fill="none"/>
+            <ellipse cx="16.5" cy="44" rx="3" ry="1.8" fill="#ff9fb0" opacity=".6"/>
+            <ellipse cx="43.5" cy="44" rx="3" ry="1.8" fill="#ff9fb0" opacity=".6"/>
+            <path d="M26,48 Q30,51 34,48" stroke="#c76b7a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="torso torso-him"><span class="torso-label">Kit</span></div>
+        <div class="leg leg-l"></div>
+        <div class="leg leg-r"></div>
+      </div>
+      <div class="heart-pop">💕</div>
+    </div>
+  </div>
+
+  <button id="toLetterBtn" class="floating-letter-btn" title="คุณได้รับ 1 ข้อความจากเจลลี่!">
+    🔔<span class="notif-badge">1</span>
+  </button>
+</section>
+
+<!-- ============ MEMORY CARD MODAL ============ -->
+<div id="memoryModal" class="modal-overlay">
+  <div class="memory-card">
+    <button class="close-btn" id="closeMemoryBtn">✕</button>
+    <div class="card-tape tape-l"></div>
+    <div class="card-tape tape-r"></div>
+
+    <div class="card-photos" id="cardPhotos"></div>
+
+    <div class="card-body">
+      <p class="card-chapter" id="cardChapterNum">Chapter 01</p>
+      <h3 class="card-title" id="cardTitle">First Hello</h3>
+      <div class="card-note" id="cardNote">
+        <div class="note-row note-loc" id="cardLocation"><span class="note-ic">📍</span><span class="note-txt"></span></div>
+        <div class="note-row note-date" id="cardDate"><span class="note-ic">📅</span><span class="note-txt"></span></div>
+        <ul class="note-timeline" id="cardTimeline"></ul>
+      </div>
+      <p class="card-caption" id="cardCaption">"..."</p>
+      <p class="card-story" id="cardStory">...</p>
+    </div>
+
+    <div class="card-nav">
+      <button id="prevCardBtn" class="nav-arrow">← ก่อนหน้า</button>
+      <button id="nextCardBtn" class="nav-arrow">ถัดไป →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LOVE LETTER ============ -->
+<section id="letterScreen" class="screen">
+  <div class="letter-paper">
+    <button class="close-btn letter-close" id="closeLetterBtn">✕</button>
+    <div class="letter-scroll" id="letterScroll">
+      <p id="typewriterText" class="typewriter-text"></p>
+      <span class="caret">|</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECRET ENDING ============ -->
+<section id="secretScreen" class="screen">
+  <div class="night-sky" id="nightSky"></div>
+  <div class="secret-content">
+    <p class="secret-msg" id="secretMsg">I hope we never run out of firsts.</p>
+    <p class="secret-sub">🌙 × 5</p>
+    <button id="closeSecretBtn" class="btn-secondary">กลับไปที่แผนที่</button>
+  </div>
+</section>
+
+<!-- ============ FLOATING MUSIC PLAYER ============ -->
+<div id="musicPlayer" class="music-player collapsed">
+  <button id="musicToggleBtn" class="music-toggle-handle" title="เพลง">🎵</button>
+  <div class="music-panel">
+    <div class="music-title" id="musicSongTitle">Our Song</div>
+    <div class="music-controls">
+      <button id="playPauseBtn" class="music-btn" title="เล่น/หยุด">▶</button>
+      <button id="loopBtn" class="music-btn" title="วนซ้ำ">🔁</button>
+      <input id="volumeSlider" type="range" min="0" max="100" value="15" title="ระดับเสียง" />
+    </div>
+  </div>
+  <audio id="bgAudio" preload="none" loop></audio>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
